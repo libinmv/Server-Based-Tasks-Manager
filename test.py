@@ -3,7 +3,7 @@ import random
 import string
 import unittest
 
-from solve_me import TasksCommand, TasksServer
+from solve_me import TasksCommand
 
 random_choices = string.ascii_uppercase + string.digits + string.ascii_lowercase
 
