@@ -149,6 +149,14 @@ $ python tasks.py runserver # Starts the tasks management server"""
             return_string += f"<div>{index +1}. {item}</div>"
         return return_string
 
+    def main_page(self):
+        # Complete this method to return all completed tasks as HTML
+        self.read_completed()
+        return_string = f"<h1> {len(self.completed_items)} Completed Tasks Are:</h1>"
+        for index, item in enumerate(self.completed_items):
+            return_string += f"<div>{index +1}. {item}</div>"
+        return return_string
+
 class TasksServer(TasksCommand, BaseHTTPRequestHandler):
     def do_GET(self):
         task_command_object = TasksCommand()
